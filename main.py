@@ -6,12 +6,18 @@ mode("logo")
 josefina = Turtle()
 josefina.shape("turtle")
 josefina.color("DeepSkyBlue")
-josefina.speed(7)
+josefina.speed(0)
 
-for i in range(0, 360):
+for i in range(0, 360, 10):
     random_color = random(), random(), random()
     josefina.pencolor(random_color)
     josefina.circle(100)
+    josefina.setheading(-i)
+    josefina.circle(100)
+
+
+screen = Screen()
+screen.exitonclick()
 
 # directions = [0, 90, 180, 270]
 #
@@ -20,10 +26,6 @@ for i in range(0, 360):
 #     random_color = random(), random(), random()
 #     josefina.pencolor(random_color)
 #     josefina.setheading(choice(directions))
-
-
-screen = Screen()
-screen.exitonclick()
 
 # for edges_number in range(3, 11):
 #    random_color = random(), random(), random()
